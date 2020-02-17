@@ -1,0 +1,26 @@
+#!/bin/bash
+
+SCRIPT=`realpath -s $0`
+ROOT_PATH=`dirname $SCRIPT`
+NGINX_VER=1.16
+CONTAINER_NAME=nginx_for_certbot
+
+#
+# config ...
+#
+
+DOMAIN="domain.example.com"
+EMAIL="email@example.com"
+RSA_KEY_SIZE=4096
+LETSENCRYPT_FOLDER=/root/volumes/letsencrypt
+
+# Commands to start/stop production http server:
+WEBSERVER_STOP_COMMAND=(/root/nginx/nginx_stop.sh)
+WEBSERVER_START_COMMAND=(/root/nginx/nginx_start.sh)
+
+#
+# ... config
+#
+
+# Helper function. Prints commands
+exe() { echo -e "\n$(tput setaf 6)$@$(tput sgr0)" ; "$@" ; }

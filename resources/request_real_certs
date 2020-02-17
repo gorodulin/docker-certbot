@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# Set these ENV vars first:
+# - DOMAIN
+# - EMAIL
+# - RSA_KEY_SIZE
+
+certbot certonly --webroot -w /var/www/certbot \
+  --email $EMAIL \
+  -d $DOMAIN \
+  --rsa-key-size $RSA_KEY_SIZE \
+  --staging \
+  --agree-tos \
+  --force-renewal
+
