@@ -1,6 +1,4 @@
-# nginx and certbot, dockerized
+# Certbot dockerized #
 
-The simplified approach allows to add new SSL-protected domains easily.
+_**Keywords:** certbot, nginx, docker, script, domain, ssl, домен, сертификат, certificate, p20200218a_
 
-- No docker-compose
-- No `init-letsencrypt.sh` [script](https://medium.com/@pentacent/nginx-and-lets-encrypt-with-docker-in-less-than-5-minutes-b4b8a60d3a71) 
